@@ -1,0 +1,24 @@
+CREATE TABLE Categoria(
+id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+nombre_categoria varchar(50) NOT NULL,
+id_usuario int, 
+FOREIGN KEY(id_usuario) REFERENCES Usuario(id) 
+
+);
+
+
+
+CREATE TABLE Resenas(
+id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+titulo varchar(50),
+nota int,
+sinopsis varchar(500),
+descripcion varchar(3000),
+favorito bit,
+estado bit,
+id_categoria int NOT NULL,
+FOREIGN KEY(id_categoria) REFERENCES Categoria(id)
+
+
+
+);
