@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyTimeline"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Cuerpo" Height="450" Width="800" MinHeight="800" MinWidth="600" WindowState="Maximized">
+    <Grid VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Column="0" Text="Hola" Height="20" Margin="15,20,15,740"></TextBox>
+        <Border Grid.Column="0"  BorderThickness="2,2,2,2" BorderBrush="Purple" CornerRadius="2,2,2,2" Margin="0,154,0,584">
+            <DockPanel Margin="5" >
+                <Image DockPanel.Dock="Left" Source="C:\Users\FP\Documents\GitHub\My_timeline\WPF\Test\lupa.png" Width="31" Height="27"></Image>
+                <TextBox  Text="test" TextAlignment="Left" FontSize="16" Background="Transparent" BorderBrush="Transparent" Height="35" Width="158" />
+            </DockPanel>
+        </Border>
+
     </Grid>
 </Window>
