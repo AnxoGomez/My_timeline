@@ -27,7 +27,7 @@ CREATE TABLE Resenas(
 
 id Integer IDENTITY(1,1) PRIMARY KEY NOT NULL,
 titulo varchar(30),
-nota Integer,
+nota float,
 sinopsis varchar(255),
 descripcion varchar(255),
 favorito bit,
