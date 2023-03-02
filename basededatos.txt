@@ -1,0 +1,38 @@
+///PASO 1: CREAR Y USAR BD
+
+CREATE DATABASE My_Timeline
+USE My_Timeline
+;
+
+
+///PASO 2: CREAR TABLAS
+
+
+CREATE TABLE Usuario(
+
+id Integer IDENTITY(1,1) PRIMARY KEY NOT NULL,
+nombre varchar(30) NOT NULL,
+contrasena varchar(30) NOT NULL,
+
+)
+
+CREATE TABLE Categoria(
+id Integer IDENTITY(1,1) PRIMARY KEY NOT NULL,
+nombre_categoria varchar(30) NOT NULL,
+id_usuario Integer NOT NULL,
+CONSTRAINT fk_Usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
+)
+
+CREATE TABLE Resenas(
+
+id Integer IDENTITY(1,1) PRIMARY KEY NOT NULL,
+titulo varchar(30),
+nota Integer,
+sinopsis varchar(255),
+descripcion varchar(255),
+favorito bit,
+estado Integer,
+id_categoria Integer,
+CONSTRAINT fk_Categoria FOREIGN KEY (id_categoria) REFERENCES Categoria(id)
+
+)
