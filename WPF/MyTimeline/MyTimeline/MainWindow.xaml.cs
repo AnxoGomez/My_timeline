@@ -23,6 +23,12 @@ namespace MyTimeline
         public MainWindow()
         {
             InitializeComponent();
+           this.Width = System.Windows.SystemParameters.PrimaryScreenWidth;
+            this.Height = System.Windows.SystemParameters.PrimaryScreenHeight;
+            this.WindowState = WindowState.Maximized;
+            this.Left = (SystemParameters.WorkArea.Width - this.Width) / 2 + SystemParameters.WorkArea.Left;
+            this.Top = (SystemParameters.WorkArea.Height - this.Height) / 2 + SystemParameters.WorkArea.Top;
+
         }
     }
 }
