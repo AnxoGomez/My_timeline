@@ -16,12 +16,12 @@ public class UsuarioServiceImp implements UsuarioService{
 
     @Override
     public List<Usuario> buscarTodo() {
-        return null;
+        return usuarioRepository.findAll();
     }
 
     @Override
     public Optional<Usuario> consultar(Integer id) {
-        return Optional.empty();
+        return usuarioRepository.findById(id);
     }
 
     @Override
@@ -36,6 +36,11 @@ public class UsuarioServiceImp implements UsuarioService{
 
     @Override
     public void borrar(Integer id) {
+        usuarioRepository.deleteById(id);
+    }
 
+    @Override
+    public Usuario login(String user, String contra) {
+        return usuarioRepository.findByNombreAndContrasena(user, contra);
     }
 }

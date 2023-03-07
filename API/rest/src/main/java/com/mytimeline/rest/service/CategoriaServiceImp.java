@@ -17,16 +17,16 @@ public class CategoriaServiceImp implements CategoriaService{
 
     @Override
     public List<Categoria> buscarTodo() {
-        return null;
+        return categoriaRepository.findAll();
     }
 
     @Override
     public Optional<Categoria> consultar(Integer id) {
-        return Optional.empty();
+        return categoriaRepository.findById(id);
     }
 
     @Override
-    public Optional<Categoria> consultarPorNombre(String nombre) {
+    public Optional<Categoria> consultarPorNombre(String nombreCategoria) {
         return Optional.empty();
     }
 
@@ -38,6 +38,6 @@ public class CategoriaServiceImp implements CategoriaService{
 
     @Override
     public void borrar(Integer id) {
-
+        categoriaRepository.deleteById(id);
     }
 }

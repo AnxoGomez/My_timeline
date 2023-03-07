@@ -27,11 +27,11 @@ public class Resena {
     private boolean favorito;
     @Column(name = "estado")
     private int estado;
-    @Column(name = "id_categoria")
-    private int id_categoria;
+    @Column(name = "idCategoria")
+    private int idCategoria;
 
     @ManyToOne
-    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    @JoinColumn(name = "idCategoria", insertable = false, updatable = false)
     private Categoria categoria;
 
 
@@ -42,6 +42,6 @@ public class Resena {
         this.descripcion = descripcion;
         this.favorito = favorito;
         this.estado = estado;
-        this.id_categoria = id_categoria;
+        this.idCategoria = id_categoria;
     }
 }

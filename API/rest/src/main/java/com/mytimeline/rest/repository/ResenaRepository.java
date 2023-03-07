@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface ResenaRepository extends JpaRepository<Resena, Integer> {
 
-    List<Resena> findByNombre (String titulo);
+    List<Resena> findByTitulo (String titulo);
 
 }

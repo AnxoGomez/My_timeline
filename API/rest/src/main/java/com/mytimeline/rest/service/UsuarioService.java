@@ -13,4 +13,5 @@ public interface UsuarioService {
     public Optional<Usuario> consultarPorNombre(String nombre);
     public Usuario guardar(Usuario usuario);
     public void borrar(Integer id);
+    public Usuario login(String user, String contra);
 }

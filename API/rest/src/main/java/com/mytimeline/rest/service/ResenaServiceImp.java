@@ -17,12 +17,12 @@ public class ResenaServiceImp implements ResenaService{
 
     @Override
     public List<Resena> buscarTodo() {
-        return null;
+        return resenaRepository.findAll();
     }
 
     @Override
     public Optional<Resena> consultar(Integer id) {
-        return Optional.empty();
+        return resenaRepository.findById(id);
     }
 
     @Override
@@ -37,6 +37,6 @@ public class ResenaServiceImp implements ResenaService{
 
     @Override
     public void borrar(Integer id) {
-
+        resenaRepository.deleteById(id);
     }
 }
