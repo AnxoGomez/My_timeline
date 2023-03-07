@@ -35,6 +35,14 @@ namespace MyTimelinePrinc
 
         }
 
+        private void crearResena()
+        {
+            grdContenido.Children.Clear();
+            Label labelImagen = new Label { Height = 50, Width = 50, Content = "Imagen" };
+            Grid.SetColumn(labelImagen, 1);
+            grdContenido.Children.Add(labelImagen);
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             grdContenido.Children.Clear();
@@ -103,6 +111,11 @@ namespace MyTimelinePrinc
 
                 vista = true;
             }
+        }
+
+        private void resenaButton_Click(object sender, RoutedEventArgs e)
+        {
+            crearResena();
         }
     }
 }

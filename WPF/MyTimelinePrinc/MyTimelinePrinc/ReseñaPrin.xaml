@@ -13,8 +13,8 @@
             <RowDefinition Height="150"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Margin="20,20,20,10" Background="White" Grid.Row="0">
-            <TextBlock Foreground="#ff3f79" HorizontalAlignment="Center" FontWeight="Bold" VerticalAlignment="Center" Text="My Timeline" FontSize="36"></TextBlock>
+        <Grid Background="#ff3f79" Grid.Row="0">
+            <TextBlock Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" VerticalAlignment="Center" Text="My Timeline" FontSize="36"></TextBlock>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -28,7 +28,7 @@
 
 
 
-            <StackPanel Background="#DCDCDC" Margin="20,10,10,20" Grid.Column="0">
+            <StackPanel Background="#DCDCDC" Grid.Column="0">
                 <Border VerticalAlignment="Top" HorizontalAlignment="Left"  Name="border"  BorderThickness="2,2,2,2" BorderBrush="#7B7B7B" CornerRadius="20,20,20,20"  Width="220" Height="40" Margin="60,40,0,0">
                     <DockPanel>
                         <Image  Source="Assets/Images/lupa.png" Margin="10,2,2,2"></Image>
@@ -40,19 +40,38 @@
 
 
                 <Button VerticalAlignment="Top" HorizontalAlignment="Left" Content="Vista"  Height="20" Width="80" Click="Button_Click" Margin="80,20,0,0"/>
+                
+                
 
+                
             </StackPanel>
 
 
-            <Grid Background="White" Margin="10,10,20,20" x:Name="grdContenido" Grid.Column="1" >
-                <Grid.RowDefinitions>
+            <Button VerticalAlignment="Bottom" x:Name="resenaButton" Height="56" Width="300" Margin="0,0,0,20" FontSize="25" FontWeight="Bold" Background="#ff3f79" Foreground="White" Click="resenaButton_Click" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="16"/>
+                    </Style>
+                </Button.Resources>
+                CREAR RESEÑA
+            </Button>
+
+
+
+            <Grid Background="White" x:Name="grdContenido" Grid.Column="1" >
+
+                <Border BorderBrush="Black" BorderThickness="2">
+                    <Label FontSize="40">Hola</Label>
+                </Border>
+
+                <!--<Grid.RowDefinitions>
                     <RowDefinition  Height="0.2*"></RowDefinition>
                     <RowDefinition  Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
+                </Grid.RowDefinitions>-->
 
 
 
-                <TextBlock  Grid.Row="0" Margin="20,20,0,0" Text="Pelicula" FontSize="24"></TextBlock>
+                <!--<TextBlock  Grid.Row="0" Margin="20,20,0,0" Text="Pelicula" FontSize="24"></TextBlock>
                 <StackPanel Grid.Row="1" >
                     <Border  Width="110" Height="160" CornerRadius="5" Margin="10">
                         <StackPanel Margin="20 0">
@@ -73,7 +92,7 @@
                         
                     
                 </StackPanel>
-                <Button Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0" Content="Vista" Width="100" Height="30"></Button>
+                <Button Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,20,0" Content="Vista" Width="100" Height="30"></Button>-->
 
 
 
