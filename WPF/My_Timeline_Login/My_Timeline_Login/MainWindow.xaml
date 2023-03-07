@@ -14,7 +14,13 @@
             <RowDefinition Height="0.65*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#ff3f79" FontSize="45" FontWeight="Bold">My Timeline</TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+            <Image Height="55" Margin="0,0,15,0" Source="pack://application:,,,/images/logo.png"></Image>
+            <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="30" FontWeight="Bold">My Timeline</TextBlock>
+
+        </StackPanel>
+
+       
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" >
 
@@ -55,7 +61,7 @@
                 </TextBox>
 
                 <TextBox x:Name="passwordBox" Height="56" Width="340" FontSize="25" Padding="20,10,0,0"
-                         Foreground="Gray">
+                         Foreground="Gray" GotFocus="login_Enter" LostFocus="login_Out">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="22"/>
@@ -68,6 +74,15 @@
                     Contraseña
 
                 </TextBox>
+
+                <Button x:Name="button_Login" Height="56" Width="340" Margin="0,60,0,0" FontSize="25" FontWeight="Bold" Background="#ff3f79" Foreground="White" >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="22"/>
+                        </Style>
+                    </Button.Resources>
+                    Registrarse
+                </Button>
 
             </StackPanel>
 
