@@ -14,22 +14,33 @@
             <RowDefinition Height="0.65*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="45" FontWeight="Bold">My Timeline</TextBlock>
-       
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#ff3f79" FontSize="45" FontWeight="Bold">My Timeline</TextBlock>
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" >
-            
-            <Button Foreground="White" VerticalAlignment="Center" FontSize="20" Margin="0,0,20,0" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold">REGISTRARSE</Button>
-            <Button Foreground="White" VerticalAlignment="Center" FontSize="20" Margin="20,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold">INICIAR SESIÓN</Button>
+
+            <StackPanel VerticalAlignment="Center" Width="180" Margin="0,0,10,0">
+                <Button x:Name="registerButton"  Foreground="White" VerticalAlignment="Center" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Click="registerButton_Click">REGISTRARSE</Button>
+                <Label x:Name="registerColor" Background="Aqua" Height="4"  Margin="0,3,0,0"></Label>            
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" Width="180" Margin="10,0,0,0">
+                <Button x:Name="loginButton" Foreground="White" VerticalAlignment="Center" FontSize="20"  Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Click="loginButton_Click">INICIAR SESION</Button>
+                <Label x:Name="loginColor" Background="Aqua" Height="4" Margin="0,3,0,0"></Label>
+            </StackPanel>
 
         </StackPanel>
 
         <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="117*"/>
+                <ColumnDefinition Width="383*"/>
+            </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Vertical" Margin="0,30,0,0">
-                
-                
-                
-                <TextBox Height="56" Width="340" Margin="0,0,0,22">
+            <StackPanel Orientation="Vertical" Margin="0,30,0,0" Grid.ColumnSpan="2">
+
+
+                <TextBox x:Name="usernameBox" Height="56" Width="340" Margin="0,0,0,22" FontSize="25" Padding="20,10,0,0"
+                         Foreground="Gray" GotFocus="usernameBox_Enter" LostFocus="usernameBox_Out">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="22"/>
@@ -38,10 +49,13 @@
                     <TextBox.Effect>
                         <DropShadowEffect/>
                     </TextBox.Effect>
+                    
+                    Usuario
 
                 </TextBox>
 
-                <TextBox Height="56" Width="340">
+                <TextBox x:Name="passwordBox" Height="56" Width="340" FontSize="25" Padding="20,10,0,0"
+                         Foreground="Gray">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="22"/>
@@ -50,13 +64,15 @@
                     <TextBox.Effect>
                         <DropShadowEffect/>
                     </TextBox.Effect>
+                    
+                    Contraseña
 
                 </TextBox>
 
             </StackPanel>
-            
+
         </Grid>
-      
+
 
 
 
