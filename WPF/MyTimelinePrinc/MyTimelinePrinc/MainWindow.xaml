@@ -1,17 +1,12 @@
-﻿<Window x:Class="MyTimeline.MainWindow"
+﻿<Window x:Class="MyTimelinePrinc.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MyTimeline"
+        xmlns:local="clr-namespace:MyTimelinePrinc"
         mc:Ignorable="d"
-        Title="Cuerpo" MinHeight="800" MinWidth="600"  >
-
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Left">
-            
-        </StackPanel>
-    </DockPanel>
-    
-    
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+    </Grid>
 </Window>

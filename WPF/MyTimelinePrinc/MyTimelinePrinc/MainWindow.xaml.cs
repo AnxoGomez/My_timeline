@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyTimeline
+namespace MyTimelinePrinc
 {
     /// <summary>
-    /// Lógica de interacción para prueba.xaml
+    /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class prueba : Window
+    public partial class MainWindow : Window
     {
-        public prueba()
+        public MainWindow()
         {
             InitializeComponent();
         }

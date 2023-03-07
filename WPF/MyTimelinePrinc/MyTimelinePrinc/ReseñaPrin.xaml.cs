@@ -1,4 +1,4 @@
-﻿using MyTimeline.Models;
+﻿using MyTimelinePrinc.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +13,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MyTimeline
+namespace MyTimelinePrinc
 {
     /// <summary>
     /// Lógica de interacción para ReseñaPrin.xaml
     /// </summary>
     public partial class ReseñaPrin : Window
     {
-        bool vista=true;
+        bool vista = true;
         private List<Review> Reviews;
         int cont = 0;
         public ReseñaPrin()
@@ -29,19 +29,17 @@ namespace MyTimeline
             this.Width = System.Windows.SystemParameters.PrimaryScreenWidth;
             this.Height = System.Windows.SystemParameters.PrimaryScreenHeight;
             this.WindowState = WindowState.Maximized;
-            
         }
-
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            
+
         }
-        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             grdContenido.Children.Clear();
 
-            TextBlock nombreCategoria = new TextBlock { Text = "Pelicula", Margin = new Thickness(40, 40, 0, 0), FontSize=42, FontFamily= new FontFamily("Sans"), FontWeight=FontWeights.Bold};
+            TextBlock nombreCategoria = new TextBlock { Text = "Pelicula", Margin = new Thickness(40, 40, 0, 0), FontSize = 42, FontFamily = new FontFamily("Sans"), FontWeight = FontWeights.Bold };
             TextBlock titulo = new TextBlock { Text = "Titulo", Margin = new Thickness(400, 100, 0, 0), FontSize = 42, FontFamily = new FontFamily("Sans") };
             TextBlock tituloResult = new TextBlock { Text = "tituloResult", Margin = new Thickness(400, 140, 0, 0), FontSize = 32, FontFamily = new FontFamily("Sans") };
             TextBlock nota = new TextBlock { Text = "Nota", Margin = new Thickness(400, 190, 0, 0), FontSize = 42, FontFamily = new FontFamily("Sans") };
@@ -57,28 +55,28 @@ namespace MyTimeline
             if (vista)
             {
 
-                
-               
- 
+
+
+
                 Grid.SetRow(nombreCategoria, 0);
                 Grid.SetRow(titulo, 1);
                 Grid.SetRow(tituloResult, 1);
                 Grid.SetRow(nota, 1);
                 Grid.SetRow(notaResult, 1);
-               
+
                 Grid.SetRow(titulo2, 1);
                 Grid.SetRow(tituloResult2, 1);
                 Grid.SetRow(nota2, 1);
                 Grid.SetRow(notaResult2, 1);
-                
 
-                
+
+
                 grdContenido.Children.Add(nombreCategoria);
                 grdContenido.Children.Add(titulo);
                 grdContenido.Children.Add(tituloResult);
                 grdContenido.Children.Add(nota);
                 grdContenido.Children.Add(notaResult);
-                
+
                 grdContenido.Children.Add(titulo2);
                 grdContenido.Children.Add(tituloResult2);
                 grdContenido.Children.Add(nota2);
@@ -89,7 +87,7 @@ namespace MyTimeline
             else
             {
 
-                tituloResult.Margin=new Thickness(100,0,0,0);
+                tituloResult.Margin = new Thickness(100, 0, 0, 0);
 
 
                 Grid.SetRow(nombreCategoria, 0);
@@ -98,7 +96,7 @@ namespace MyTimeline
                 Grid.SetRow(tituloResult, 1);
                 Grid.SetRow(tituloResult, 1);
                 Grid.SetRow(tituloResult, 1);
-               
+
 
                 grdContenido.Children.Add(nombreCategoria);
                 grdContenido.Children.Add(tituloResult);
@@ -106,7 +104,5 @@ namespace MyTimeline
                 vista = true;
             }
         }
-        
-        }
     }
-
+}

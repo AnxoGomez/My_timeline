@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyTimeline.Models
+namespace MyTimelinePrinc.Models
 {
     public class Review
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTimeline", "MyTimeline\MyTimeline.csproj", "{B6E8C71E-6E26-4C90-B2E9-675997861E58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTimelinePrinc", "MyTimelinePrinc\MyTimelinePrinc.csproj", "{4AC92A23-E0D9-43FA-A392-CCAF8E402478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6E8C71E-6E26-4C90-B2E9-675997861E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6E8C71E-6E26-4C90-B2E9-675997861E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6E8C71E-6E26-4C90-B2E9-675997861E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6E8C71E-6E26-4C90-B2E9-675997861E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC92A23-E0D9-43FA-A392-CCAF8E402478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC92A23-E0D9-43FA-A392-CCAF8E402478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC92A23-E0D9-43FA-A392-CCAF8E402478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC92A23-E0D9-43FA-A392-CCAF8E402478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BEAA773C-3297-4903-A37F-DF50C0C037AA}
+		SolutionGuid = {C1D60D3C-EEC0-4360-9691-6741CE69649E}
 	EndGlobalSection
 EndGlobal
