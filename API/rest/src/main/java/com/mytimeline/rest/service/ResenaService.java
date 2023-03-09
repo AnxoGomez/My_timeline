@@ -7,9 +7,8 @@ import java.util.Optional;
 
 public interface ResenaService {
     List<Resena> buscarTodo();
-
     public Optional<Resena> consultar(Integer id);
-    public Optional<Resena> consultarPorNombre(String nombre);
+    public List<Resena> consultarPorNombre(String nombre);
     public Resena guardar(Resena resenas);
     public void borrar(Integer id);
 }

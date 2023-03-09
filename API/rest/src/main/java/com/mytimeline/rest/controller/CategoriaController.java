@@ -8,6 +8,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/category")
 public class CategoriaController {
@@ -15,14 +17,16 @@ public class CategoriaController {
     private CategoriaService serviceC;
 
     @PostMapping
-    @Operation(summary = "Registro de categoria")
+    @Operation(summary = "Inserto de datos")
     public Categoria registroCategoria(@RequestBody Categoria categoria) {
         return serviceC.guardar(categoria);
     }
 
-    /*@GetMapping
-    @Operation(summary = "Login de datos")
-    public Usuario consultarUser(@RequestBody Usuario user) {
-        return serviceC.login(user.getNombre(), user.getContrasena());
-    }*/
+    @GetMapping
+    @Operation(summary = "Recopilar todos los datos")
+    public List<Categoria> consultarUser(@RequestBody Categoria categoria) {
+        return serviceC.buscarTodo();
+    }
+
+
 }

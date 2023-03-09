@@ -28,4 +28,10 @@ public class UsuarioController {
     public Usuario consultarUser(@RequestBody Usuario user) {
         return serviceU.login(user.getNombre(), user.getContrasena());
     }
+
+    @DeleteMapping
+    @Operation(summary = "Borre un usuario")
+    public void borrarUser(Integer id) {
+        serviceU.borrar(id);
+    }
 }

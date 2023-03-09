@@ -26,8 +26,8 @@ public class CategoriaServiceImp implements CategoriaService{
     }
 
     @Override
-    public Optional<Categoria> consultarPorNombre(String nombreCategoria) {
-        return Optional.empty();
+    public List<Categoria> consultarPorNombre(String nombreCategoria) {
+        return categoriaRepository.findBynombreCategoria(nombreCategoria);
     }
 
     @Override

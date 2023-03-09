@@ -20,9 +20,9 @@ public class Categoria {
     @Column(name = "idUsuario")
     private Integer idUsuario;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "idUsuario", insertable = false, updatable = false)
-    private Usuario usuario;
+    private Usuario usuario;*/
 
 
     public Categoria(String nombreCategoria, Integer idUsuario) {

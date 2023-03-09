@@ -30,9 +30,9 @@ public class Resena {
     @Column(name = "idCategoria")
     private int idCategoria;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "idCategoria", insertable = false, updatable = false)
-    private Categoria categoria;
+    private Categoria categoria;*/
 
 
     public Resena(String titulo, float nota, String sinopsis, String descripcion, boolean favorito, int estado, int id_categoria) {

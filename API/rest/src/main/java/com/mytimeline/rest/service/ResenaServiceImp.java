@@ -14,7 +14,6 @@ public class ResenaServiceImp implements ResenaService{
     @Autowired
     private ResenaRepository resenaRepository;
 
-
     @Override
     public List<Resena> buscarTodo() {
         return resenaRepository.findAll();
@@ -26,8 +25,8 @@ public class ResenaServiceImp implements ResenaService{
     }
 
     @Override
-    public Optional<Resena> consultarPorNombre(String nombre) {
-        return Optional.empty();
+    public List<Resena> consultarPorNombre(String titulo) {
+        return resenaRepository.findByTitulo(titulo);
     }
 
     @Override
